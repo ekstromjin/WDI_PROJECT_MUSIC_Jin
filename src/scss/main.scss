@@ -67,9 +67,7 @@ body{
 #signUP{
 	background-color:#121212;
 }
-#usrimg{
-	height:180px;
-}
+
 #profile{
 	width:100%;
 	border-radius:50%;
@@ -80,17 +78,7 @@ body{
 		margin-left:20%;
 	}
 }
-#name{
-	width:100%;
-	text-align:center;
-	height:40px;
-	background:#7D7D7D;
-	color:white;
-}
-#usrnm{
-	padding-top:7px;
-	font-family:Roboto;
-}
+
 .copyrights{
 margin-top:25px;
 }
@@ -106,10 +94,7 @@ border-top: 1px solid #525252;
 .white-txt{
 color: #FFF;
 }
-#imgUser{
- width:100%;
- height:200px;
-}
+
 #usrlnk:hover{
 	text-decoration:none;
 	color:blue;
@@ -145,9 +130,53 @@ body{
 	background-color:black;
 }
 
+/***************************************/
+/* css by Jin **************************/
+/***************************************/
+
+main {
+  min-height: 70vh;  
+}
+
+.home-users {
+  padding-top: 20px;
+  &-item {
+    margin-bottom: 30px;
+
+    &-name {
+      width:100%;
+      text-align:center;
+      height:40px;
+      background:#7D7D7D;
+      color:white;
+      margin-top: 15px;
+
+      & p {
+        padding-top:7px;
+        font-family:Roboto;
+      }
+    }
+  }
+}
+
 .track-index {
   &-box {
     margin-bottom: 50px;
+
+    &-video {
+      width: 100%;
+      height: 0px;
+      padding-top: 60%;
+      position: relative;
+
+      & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 

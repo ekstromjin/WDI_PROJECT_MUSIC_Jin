@@ -5,7 +5,9 @@
   <div class="row">
     <% tracks.forEach((track) => { %>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 track-index-box">
-        <iframe class="thumbnail" src="https://www.youtube.com/embed/<%= track.link %>?rel=0&amp;controls=0&amp;showinfo=0" alt="<%= track.name %>" id="imgUser"></iframe>
+        <div class="track-index-box-video">
+          <iframe class="thumbnail" src="https://www.youtube.com/embed/<%= track.link %>?rel=0&amp;controls=0&amp;showinfo=0" alt="<%= track.name %>"></iframe>
+        </div>
         <h3><a href="/tracks/<%= track.id %>"><%= track.name %></a></h3>
         <p>
           <%= track.artist %><br>
