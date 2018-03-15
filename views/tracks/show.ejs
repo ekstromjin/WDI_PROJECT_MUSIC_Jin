@@ -1,0 +1,67 @@
+<div class="container track-show-wrapper">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="track-show-wrapper-videobox">
+                <iframe class="" src="https://www.youtube.com/embed/<%= track.link %>?rel=0&amp;controls=0&amp;showinfo=0" alt="<%= track.name %>"></iframe>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h2><%= track.name %></h2>
+            <h3><%= track.artist %></h3>
+
+            <div class="track-show-wrapper-poster">
+                <img src="<%= track.createdBy.photo %>" alt="" class="img-responsive img-circle pull-left" >
+                <h4><%= track.createdBy.username %></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class=" track-show-wrapper-comments">Comments</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% if(locals.isAuthenticated) { %>
+    <div class="row track-show-wrapper-comments-form" id="leavecomments">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="POST" action="/tracks/<%= track.id %>/comments">
+                        <textarea name="content" id="content" class="form-control" rows="5" placeholder="Comment on this track..."></textarea>
+                        <button class="btn btn-default commentbutton">Comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+    <div class="row track-show-wrapper-comments-list" id="comments">
+        <div class="col-md-8">
+            <% track.comments.forEach((comment) => { %>
+            <div class="commentsmargin  track-show-wrapper-comments-item">
+                <div class="pull-left text-center">
+                    <img src="<%= track.createdBy.photo %>" alt="" class="img-responsive img-circle" >
+                    <small><%= comment.createdBy.username %></small>
+                </div>
+                <div class="track-show-wrapper-comments-item-contents">
+                    <p class="commentcontent"><%- comment.content.replace(/(?:\r\n|\r|\n)/g, '<br />') %></p>
+                    <small>Created at <%= moment(comment.createdAt).fromNow() %></small>
+                    <% if(locals.isAuthenticated && track.belongsTo(user)) { %>
+                        <form method="POST" action="/tracks/<%= track.id %>/comments/<%= comment.id %>" class="track-show-wrapper-comments-item-delete">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button>Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
