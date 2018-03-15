@@ -1,44 +1,42 @@
 <div class="container">
-  <br><br>
-  <div id="display">
-    <div class="row">
-    <div id="signupbox" class="mainbox col-sm-8 col-sm-offset-2 signup-box">
-      <div class="" id="signUP">
-        <div class="">
-          <br>
-            <h3 id="wellcome">Add a track</h3>
-          <p id="abt">Fill in the following info to add a new track</p>
+    <br><br>
+    <div id="display">
+        <div class="row">
+            <div id="signupbox" class="mainbox col-sm-8 col-sm-offset-2 signup-box">
+                <div class="" id="signUP">
+                    <div class="beats-forms">
+                        <br>
+                        <h3 id="wellcome">Add a track</h3>
+                        <p id="abt">Fill in the following info to add a new track</p>
 
-          <form method="POST" action="/tracks" class="newtrack">
-            <div >
-              <div>
-                <center><input type="text" name="name" id="newtrack" placeholder="name" required></center>
-              </div>
-            </div>
-            <div class="form-group">
-              <div>
-                <center><input type="text" name="artist" id="artist" placeholder="artist" required></center>
-              </div>
-            </div>
+                        <form method="POST" action="/tracks" class="newtrack">
+                            <div >
+                                <div>
+                                    <center><input type="text" name="name" id="newtrack" placeholder="name" required class="form-control"></center>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <center><input type="text" name="artist" id="artist" placeholder="artist" required class="form-control"></center>
+                                </div>
+                            </div>
 
-            </div>
-            <div class="form-group">
-              <div>
-                <center><input type="link" name="link" id="link" placeholder="YouTube video ID" required></center>
-              </div>
+                            <div class="form-group">
+                                <div>
+                                    <center><input type="link" name="link" id="link" placeholder="YouTube video ID" required class="form-control"></center>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div >
+                                    <center><input type="submit" name="signup" class="btn btn-primary" value="add"></center>
+                                    <br><br>
+                                </div>
+                            </div>
 
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <div >
-                <center><input type="submit" name="signup" class="btn btn-primary" value="add"></center>
-                <br><br>
-              </div>
-            </div>
-
-          </form>
         </div>
-      </div>
     </div>
-  </div>
-  </div>
 </div>

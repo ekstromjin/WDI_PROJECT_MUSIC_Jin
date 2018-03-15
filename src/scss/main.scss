@@ -138,6 +138,24 @@ main {
   min-height: 70vh;  
 }
 
+footer {
+  margin-top: 50px;
+}
+
+.page-message-box {
+  & p {
+    padding: 10px 15px 8px 15px;
+  }
+}
+
+.beats-forms {
+  .form-control {
+    width: 80%;
+    padding: 20px 12px;
+    margin: 5px auto;
+  }
+}
+
 .home-users {
   padding-top: 20px;
   &-item {

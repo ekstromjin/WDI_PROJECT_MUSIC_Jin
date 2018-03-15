@@ -1,6 +1,8 @@
 
 <% if (locals.message) { %>
-  <p><%= message %></p>
+  <div class="container page-message-box">
+    <p class="bg-danger"><%= message %></p>
+  </div>
 <% } %>
 
 <!--
@@ -44,7 +46,7 @@
   <br><br>
   <div id="display">
     <div class="row">
-    <div id="signupbox" class="mainbox col-sm-8 col-sm-offset-2 signup-box">
+    <div id="signupbox" class="mainbox col-sm-8 col-sm-offset-2 signup-box beats-forms">
       <div class="" id="signUP">
         <div class="">
           <br>
@@ -58,39 +60,39 @@
           <form id="signupform" class="form-horizontal" role="form" method="POST" action="/register">
             <div class="form-group">
               <div>
-                <center><input type="text" name="firstName" placeholder="First Name"></center>
+                <center><input type="text" name="firstName" placeholder="First Name" required class="form-control"></center>
               </div>
             </div>
             <div class="form-group">
               <div>
-                <center><input type="text" name="lastName" placeholder="Last Name"></center>
+                <center><input type="text" name="lastName" placeholder="Last Name"  required class="form-control"></center>
               </div>
             </div>
             <div class="form-group">
               <div>
-                <center><input type="text" name="email" placeholder="Email Address"></center>
+                <center><input type="text" name="email" placeholder="Email Address"  required class="form-control"></center>
               </div>
             </div>
             <div class="form-group">
               <div>
-                <center><input type="text" name="username" placeholder="Username"></center>
-              </div>
-
-            </div>
-            <div class="form-group">
-              <div>
-                <center><input type="text" name="profile picture" placeholder="profile picture"></center>
+                <center><input type="text" name="username" placeholder="Username"  required class="form-control"></center>
               </div>
 
             </div>
             <div class="form-group">
               <div>
-                <center><input type="password" name="password" placeholder="Password"></center>
+                <center><input type="text" name="profile picture" placeholder="profile picture"  required class="form-control"></center>
+              </div>
+
+            </div>
+            <div class="form-group">
+              <div>
+                <center><input type="password" name="password" placeholder="Password"  required class="form-control"></center>
               </div>
             </div>
             <div class="form-group">
               <div>
-                <center><input type="password" name="passwordConfirmation" placeholder="Password"></center>
+                <center><input type="password" name="passwordConfirmation" placeholder="Password"  required class="form-control"></center>
               </div>
             </div>
             <div class="form-group">
